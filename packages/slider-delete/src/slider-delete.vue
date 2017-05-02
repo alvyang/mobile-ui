@@ -1,0 +1,58 @@
+<template>
+	<div class="slider_delete" :style="{webkitTransform:'translate3d('+transformX+'rem,0,0)'}" 
+		@touchstart="touchStart($event)" 
+		@touchend="touchEnd($event)"
+		@touchmove="touchMove($event)">
+		<slot></slot>
+	</div>
+</template>
+<script>
+	/* 
+	 * 滑动配置。distance 滑动距离
+	 */
+	export default({
+		name:"MoSliderDelete",
+		componentName: 'MoSliderDelete',
+		props:['sliderConf'],
+		data(){
+			return {
+				startPos:{x:0,y:0},
+				endPos:{x:0,y:0},
+				transformX:0,
+				transformStartX:0,
+				
+			}
+		},
+		methods:{
+			touchStart(e){
+				this.startPos.x = e.targetTouches[0].screenX;
+				this.transformStartX = this.transformX;
+			},
+			touchMove(e){
+				e.preventDefault();
+				var x = e.targetTouches[0].screenX;
+				var temp = (x - this.startPos.x)/75;
+				if(temp > this.sliderConf.distance || (this.transformX == 0 && temp > 0) ){
+					this.transformX = 0;
+				}else{
+					this.transformX =this.transformStartX + temp;
+				}
+			},
+			touchEnd(e){
+				if(this.transformX > 0){
+					this.transformX = 0;
+				}
+				if(this.transformX < 0){
+					this.transformX = -this.sliderConf.distance;
+				}
+			}
+		}
+	})
+</script>
+<style>
+	.slider_delete{
+		position: absolute;
+		left: 0;
+		z-index: 100;
+	}
+</style>
