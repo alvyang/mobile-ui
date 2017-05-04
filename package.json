@@ -1,9 +1,11 @@
 {
   "name": "vue-components",
   "version": "1.0.0",
-  "description": "vue组件化",
-  "main": "webpack.config.js",
+  "description": "移动端vue组件",
+  "main": "./src/index.js",
   "scripts": {
+  	"webpack":"webpack --config build/webpack.config.js",
+  	"webpack:watch":"webpack --config build/webpack.config.js -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

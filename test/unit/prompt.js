@@ -15,16 +15,10 @@ describe('SliderDelete', () => {
 	    vm = createVue({
 	      	template: `
 		        <div class="delete_div">
-		          <slider-delete>
-		          	<div class="content"></div>
-		          </slider-delete>
+		          123123
 		          <div class="delete_button"></div>
 		        </div>
-	      	`,
-	      	
-			components:{
-				"slider-delete":SliderDelete,
-			}
+	      	`
 	    }, true);
 	});
 })
