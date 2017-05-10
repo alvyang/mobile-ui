@@ -23,6 +23,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 module.exports = {
 	AddressSelect,
+	install,
 	Prompt,
 	SliderDelete,
 }

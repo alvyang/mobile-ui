@@ -1,5 +1,5 @@
 {
-  "name": "vue-components",
+  "name": "mo-ui",
   "version": "1.0.0",
   "description": "移动端vue组件",
   "main": "./src/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvyang/stone-vue-mobile.git"
+    "url": "git+https://github.com/alvyang/mobile-ui.git"
   },
   "keywords": [
     "vue",
@@ -19,9 +19,9 @@
   "author": "lv yang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alvyang/stone-vue-mobile/issues"
+    "url": "https://github.com/alvyang/mobile-ui/issues"
   },
-  "homepage": "https://github.com/alvyang/stone-vue-mobile#readme",
+  "homepage": "https://github.com/alvyang/mobile-ui#readme",
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
