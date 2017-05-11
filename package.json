@@ -1,8 +1,8 @@
 {
   "name": "mo-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "移动端vue组件",
-  "main": "./src/index.js",
+  "main": "lib/index.js",
   "scripts": {
   	"webpack":"webpack --config build/webpack.config.js",
   	"webpack:watch":"webpack --config build/webpack.config.js -w",
