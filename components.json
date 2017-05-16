@@ -1,0 +1,5 @@
+{
+  "address-select": "./packages/address-select/index.js",
+  "prompt": "./packages/prompt/index.js",
+  "slider-delete": "./packages/slider-delete/index.js"
+}
